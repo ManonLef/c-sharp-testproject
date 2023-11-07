@@ -1,14 +1,5 @@
-﻿int employeeLevel = 100;
-string employeeName = "John Smith";
-
-string title = "";
-
-title = employeeLevel switch
+﻿string[] names = { "Alex", "Alec", "Mo", "Marie" };
+for (int i = names.Length - 1; i >= 0; i--)
 {
-    100 or 200 => "Senior Associate",
-    300 => "Manager",
-    400 => "Senior Manager",
-    _ => "Associate",
-};
-
-Console.WriteLine($"{employeeName}, {title}");
+  Console.WriteLine(names[i]);
+}
