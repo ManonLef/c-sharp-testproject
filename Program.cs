@@ -1,14 +1,19 @@
-﻿string[] names = { "Alex", "Alec", "Mo", "Marie" };
-
-// had to google how to output separate string items since Console.WriteLine(names) just outputs System.String[]
-Console.WriteLine(string.Join("\n", names));
-
-for (int i = 0; i < names.Length; i++)
+﻿for (int i = 1; i <= 100; i++)
 {
-  if (names[i] == "Mo")
+  if ((i % 3 == 0) && (i % 5 == 0))
   {
-    names[i] = "Sammy";
+    Console.WriteLine(i + " FizzBuzz");
+  }
+  else if (i % 3 == 0)
+  {
+    Console.WriteLine(i + " Fizz");
+  }
+  else if (i % 5 == 0)
+  {
+    Console.WriteLine(i + " Buzz");
+  }
+  else
+  {
+    Console.WriteLine(i);
   }
 }
-
-Console.WriteLine(string.Join("\n", names));
